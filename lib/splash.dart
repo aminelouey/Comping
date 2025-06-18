@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:comping/screens/loginscreen.dart';
+import 'package:comping/screens/WelcomScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -16,11 +16,11 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    // Délai de 3 secondes avant de naviguer vers HomePage
-    Timer(const Duration(seconds: 3), () {
+    // Délai de 2 secondes avant de naviguer vers HomePage
+    Timer(const Duration(seconds: 6), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Loginscreen()),
+        MaterialPageRoute(builder: (context) => Welcomscreen()),
       );
     });
   }
@@ -40,31 +40,8 @@ class _SplashState extends State<Splash> {
               Padding(
                 padding: const EdgeInsets.only(right: 30.0),
                 child: Text(
-                  'Makes your camping more easy, next',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              Gap(2),
-              Padding(
-                padding: const EdgeInsets.only(right: 38.0),
-                child: Text(
-                  ' level. and helps you to follow your',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              Gap(2),
-              Padding(
-                padding: const EdgeInsets.only(right: 38.0),
-                child: Text(
-                  ' plannings.',
+                  textAlign: TextAlign.center,
+                  'Makes your camping more easy, next level. and helps you to follow your plannings.',
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.normal,

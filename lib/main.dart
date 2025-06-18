@@ -1,8 +1,14 @@
+import 'package:comping/screens/NewPasswordScreen.dart';
+import 'package:comping/screens/SignUpScreen.dart';
+import 'package:comping/screens/SuccesAdmis.dart';
 import 'package:comping/screens/loginscreen.dart';
-import 'package:comping/screens/splash.dart';
+import 'package:comping/splash.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   runApp(const MyApp());
 }
 
@@ -12,8 +18,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(fontFamily: 'Poppins'),
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(fontFamily: 'Poppins'),
       home: Splash(),
     );
   }
